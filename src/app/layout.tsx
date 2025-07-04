@@ -1,18 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./components/styles/globals.css";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import Navbar from './components/layout/Navbar';
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Footer from './components/layout/Footer';
+import { syne } from '@/app/components/styles/fonts';
 
 export const metadata: Metadata = {
   title: "Examen LKMX",
@@ -27,11 +18,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${syne.className} antialiased min-h-screen flex flex-col`}
       >
         <AppRouterCacheProvider>
           <Navbar />
-          {children}
+          <div className="flex-grow">{children}</div>
+          <Footer />
         </AppRouterCacheProvider>
       </body>
     </html>
