@@ -2,7 +2,8 @@ FROM node:24-alpine AS builder
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY package.json package-lock.json ./
+COPY prisma ./prisma.
 RUN npm ci
 
 COPY . .
