@@ -20,7 +20,7 @@ export default function RootLayout({
       <body
         className={`${syne.className} antialiased min-h-screen flex flex-col`}
       >
-        <AppRouterCacheProvider>
+        <AppRouterCacheProvider options={{enableCssLayer: true}}>
           <Navbar />
           <div className="flex-grow">{children}</div>
           <Footer />
