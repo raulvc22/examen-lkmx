@@ -36,3 +36,4 @@ the project structure is as follows:
 - security, there are no real security measures and its definetely a point of improvement
 - integration of tests with jester
 - possibility of project reestructuring for cleaner dev experience
+- responsiveness was left for later due to time constraints
