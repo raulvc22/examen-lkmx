@@ -9,7 +9,7 @@
 
 ## Google Cloud
 
-deployment link: 
+deployment link: https://examenlkmx-985906704920.northamerica-south1.run.app
 
 ## About the project
 
