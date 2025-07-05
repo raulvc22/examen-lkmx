@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SOFTWARE ENGINEER TEST FOR LKMX
 
-## Getting Started
+## Build
 
-First, run the development server:
+1. Clone the repository with: https://github.com/raulvc22/examen-lkmx.git
+2. Modify environment variables if necessary (should not be)
+3. In your terminal run the command: docker-compose up -d
+4. The command will build an image for both the database and the app, you should be able to access it trough: localhost:3000
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Google Cloud
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+deployment link: 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## About the project
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This is my test for the software engineer role at lkmx, the web app consists of the following stack:
 
-## Learn More
+- Next.js
+- Tailwind CSS
+- PostgreSQL
+- Material UI
+- Prisma
+- Docker
 
-To learn more about Next.js, take a look at the following resources:
+the project structure is as follows:
+- all code is inside the src directory
+- src/app contains most of the project code, this is to mainly try to take advantage of Next.js layout feature which allows to render visual components without reloading the page
+- src/app/api contains all routes regarding the api
+- src/lib contains a file for a prisma client setup
+- src/types contains utilities in the form of interfaces that are used throughout the project
+- src/app/components contains most the the ui components and styling code for the app
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Future Improvements
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- optimization, the app can sometimes be slow during the first renders
+- security, there are no real security measures and its definetely a point of improvement
+- integration of tests with jester
+- possibility of project reestructuring for cleaner dev experience
