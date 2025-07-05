@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/db'
 import { AnalyticsData } from '@/types'
 
+// Definir tipo para el resultado de la consulta
 interface UserEmail {
     email: string;
 }
@@ -13,25 +14,23 @@ export async function GET() {
         })
         
         const totalUsers = users.length
-        const emailHandles: Record<string, number> = {}
+        const emailDomains: Record<string, number> = {}
         
-        // Extraer y contar handles de email
         users.forEach((user: UserEmail) => {
-            const handle = user.email.split('@')[1]
-            if (handle) {
-                emailHandles[handle] = (emailHandles[handle] || 0) + 1
+            const domain = user.email.split('@')[1]
+            if (domain) {
+                emailDomains[domain] = (emailDomains[domain] || 0) + 1
             }
         })
         
-        // Ordenar handles por cantidad
-        const topHandles = Object.entries(emailHandles)
-            .map(([handle, count]) => ({ handle, count }))
+        const topDomains = Object.entries(emailDomains)
+            .map(([domain, count]) => ({ domain, count }))
             .sort((a, b) => b.count - a.count)
         
         const analytics: AnalyticsData = {
             totalUsers,
-            emailHandles,
-            topHandles
+            emailDomains,
+            topDomains
         }
         
         return NextResponse.json(analytics)

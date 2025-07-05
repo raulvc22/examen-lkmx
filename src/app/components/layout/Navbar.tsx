@@ -28,8 +28,8 @@ const Navbar = () => {
                             const isActive = pathName === item.href;
 
                             return (
-                                <li key={index}>
-                                    <Link href={item.href} className="relative inline-block text-xl text-white">
+                                <li key={index} className='relative inline-block text-white hover:text-[#ed245d] text-xl'>
+                                    <Link href={item.href}>
                                         {item.label}
                                         <span className={`absolute left-[-10%] bottom-0 h-0.5 w-[120%] bg-white ${isActive ? "scale-x-100" : "scale-x-0"} origin-left`}></span>
                                     </Link>
