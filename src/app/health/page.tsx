@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 
 function ServerHealth() {
-    const [healthStatus, setHealthStatus] = useState<string>('Checking server health...');
+    const [healthStatus, setHealthStatus] = useState<string>('Revisando salud del servidor...');
 
     useEffect(() => {
         fetch('/api/health')
@@ -12,12 +12,12 @@ function ServerHealth() {
             setHealthStatus(`${res.status} - ${data.message}`)
         })
         .catch(() => {
-            setHealthStatus('Error - Unable to reach server.');
+            setHealthStatus('Error - no pudimos comunicarnos con el servidor.');
         });
     }, []);
 
     return (
-        <div className="text-6xl font-[syne] text-[#0B0E29]">
+        <div className="text-6xl font-[syne] text-[#0B0E29] mx-40 text-center">
         {healthStatus}
         </div>
     );

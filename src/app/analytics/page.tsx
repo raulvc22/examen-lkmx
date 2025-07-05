@@ -26,7 +26,7 @@ const Page = () => {
     return (
         <div className="flex flex-col text-center items-center justify-center my-30 gap-y-15">
             <div className="text-6xl text-[#0B0E29] border-b-2 border-[#0B0E29]">
-                ANALYTICS
+                ANALITICAS
             </div>
             <div>
                 <TableContainer component={Paper} className="min-w-[650px] rounded-none shadow-none border-2 border-[#0B0E29]">
