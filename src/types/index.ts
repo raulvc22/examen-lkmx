@@ -12,5 +12,4 @@ export interface CreateUserRequest {
 export interface AnalyticsData {
     totalUsers: number,
     emailDomains: Record<string, number>
-    topDomains: Array<{domain: string; count: number}>
 }

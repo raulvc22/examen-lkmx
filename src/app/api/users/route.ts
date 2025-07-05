@@ -15,7 +15,7 @@ function isPrismaError(error: unknown): error is PrismaError {
 export async function GET() {
     try {
         const users = await prisma.user.findMany({
-            orderBy: { id: 'desc' }
+            orderBy: { id: 'asc' }
         })
         return NextResponse.json(users)
     } catch (error) {

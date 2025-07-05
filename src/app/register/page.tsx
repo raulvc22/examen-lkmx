@@ -9,15 +9,28 @@ const Page = () => {
         email: '',
     });
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log('Form submitted:', formData);
-        // api logic
 
-        setFormData({
-            username: '',
-            email: '',
-        });
+        try {
+            const response = await fetch('/api/users', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setFormData({
+                    username: '',
+                    email: '',
+                });
+            }
+        } catch (error) {
+            console.error('Error creating user:', error);
+        }
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

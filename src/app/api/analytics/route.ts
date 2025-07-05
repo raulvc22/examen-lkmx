@@ -1,8 +1,6 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/db'
-import { AnalyticsData } from '@/types'
 
-// Definir tipo para el resultado de la consulta
 interface UserEmail {
     email: string;
 }
@@ -23,14 +21,9 @@ export async function GET() {
             }
         })
         
-        const topDomains = Object.entries(emailDomains)
-            .map(([domain, count]) => ({ domain, count }))
-            .sort((a, b) => b.count - a.count)
-        
-        const analytics: AnalyticsData = {
+        const analytics = {
             totalUsers,
-            emailDomains,
-            topDomains
+            emailDomains
         }
         
         return NextResponse.json(analytics)
