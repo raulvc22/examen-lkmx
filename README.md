@@ -11,13 +11,15 @@
 
 deployment link: https://examenlkmx-985906704920.northamerica-south1.run.app
 
+App was deployed to Google Cloud through the project image hosted in dockerhub
+
 ## About the project
 
 This is my test for the software engineer role at lkmx, the web app consists of the following stack:
 
 - Next.js
 - Tailwind CSS
-- PostgreSQL
+- PostgreSQL | Supabase
 - Material UI
 - Prisma
 - Docker
