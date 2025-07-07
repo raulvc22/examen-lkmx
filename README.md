@@ -9,7 +9,7 @@
 
 ## Google Cloud
 
-deployment link: https://examenlkmx-985906704920.northamerica-south1.run.app
+Deployment link: https://examenlkmx-985906704920.northamerica-south1.run.app
 
 App was deployed to Google Cloud through the project image hosted in dockerhub
 
@@ -24,8 +24,8 @@ This is my test for the software engineer role at lkmx, the web app consists of 
 - Prisma
 - Docker
 
-the project structure is as follows:
-- all code is inside the src directory
+The project structure is as follows:
+- All code is inside the src directory
 - src/app contains most of the project code, this is to mainly try to take advantage of Next.js layout feature which allows to render visual components without reloading the page
 - src/app/api contains all routes regarding the api
 - src/lib contains a file for a prisma client setup
@@ -34,8 +34,8 @@ the project structure is as follows:
 
 ## Future Improvements
 
-- optimization, the app can sometimes be slow during the first renders
-- security, there are no real security measures and its definetely a point of improvement
-- integration of tests with jester
-- possibility of project reestructuring for cleaner dev experience
-- responsiveness was left for later due to time constraints
+- Optimization, the app can sometimes be slow during the first renders
+- Security, there are no real security measures and its definetely a point of improvement
+- Integration of tests with jester
+- Possibility of project reestructuring for cleaner dev experience
+- Responsiveness was left for later due to time constraints
