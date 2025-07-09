@@ -24,6 +24,11 @@ const Page = () => {
         fetchUsers();
     }, []);
 
+    const truncateUsername = (username: string) => {
+        if (username.length <= 16) return username;
+        return username.substring(0, 16) + '...';
+    };
+
     return (
         <div className="flex flex-col items-center justify-center my-30 gap-y-15">
             <div className="text-6xl text-[#0B0E29] border-b-2 border-[#0B0E29]">
@@ -43,7 +48,7 @@ const Page = () => {
                             {users.map((user) => (
                                 <TableRow key={user.id}>
                                     <TableCell className="w-20">{user.id}</TableCell>
-                                    <TableCell className='w-60 font-[syne]'>{user.username}</TableCell>
+                                    <TableCell className='w-60 font-[syne]' title={user.username}>{truncateUsername(user.username)}</TableCell>
                                     <TableCell className='w-90 font-[syne]'>{user.email}</TableCell>
                                 </TableRow>
                             ))}
