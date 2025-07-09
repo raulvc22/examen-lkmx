@@ -43,8 +43,8 @@ const Page = () => {
                             {users.map((user) => (
                                 <TableRow key={user.id}>
                                     <TableCell className="w-20">{user.id}</TableCell>
-                                    <TableCell className='font-[syne]'>{user.username}</TableCell>
-                                    <TableCell className='font-[syne]'>{user.email}</TableCell>
+                                    <TableCell className='w-60 font-[syne]'>{user.username}</TableCell>
+                                    <TableCell className='w-90 font-[syne]'>{user.email}</TableCell>
                                 </TableRow>
                             ))}
                         </TableBody>

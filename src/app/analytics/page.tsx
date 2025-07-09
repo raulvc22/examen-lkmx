@@ -40,8 +40,8 @@ const Page = () => {
                         <TableBody>
                             {analytics?.emailDomains && Object.entries(analytics.emailDomains).map(([domain, count]) => (
                                 <TableRow key={domain}>
-                                    <TableCell className="font-[syne]">{domain}</TableCell>
-                                    <TableCell className='font-[syne]'>{count}</TableCell>  
+                                    <TableCell className="w-30 font-[syne]">{domain}</TableCell>
+                                    <TableCell className='w-10 font-[syne]'>{count}</TableCell>  
                                 </TableRow>
                             ))}
                         </TableBody>
